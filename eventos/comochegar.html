@@ -6,8 +6,34 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
+    <style>
+    #getDirections{
+        background-color: aqua !important
+    }
+    .widget-container .directions-button:hover, .widget-container .directions-button:focus {
+
+background: #fff;
+
+}
+    </style>
+    </head>
 <body>
-    
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="../index.html">CampusMap</a>
+                <ul class="nav navbar-nav ml-auto">
+                    <li>
+                        <button class="btn btn-default" style="border-color: black;" onclick="document.location = 'admin/login.html';">Login</button>
+                </li>
+                </ul>
+            </nav>
+            <div style="clear:both;"></div>
+    <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; var ro = !!d.getElementById(id); js = d.createElement(s); js.id = id; js.src = "https://widgets.moovit.com/ws/8DD4DA7ABE1587CCE0530100007F4846/2919386"; fjs.parentNode.insertBefore(js, fjs); })(document, 'script', 'moovit-jsw'); 
+        setTimeout(() => {
+            console.log(document.getElementById("getDirections"));
+        },10000)
+     </script> <div class="mv-gd-widget-20" data-width="100%" data-height="100%" data-id="2919386"></div> 
+    <script>
+        document.getElementById("getDirections").style.backgroundColor = "#ffffff";
+    </script>
 </body>
 </html>

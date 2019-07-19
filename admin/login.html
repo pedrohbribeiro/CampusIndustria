@@ -16,21 +16,21 @@
             border-width: 0 0 2px;
             background-color: transparent;
             border-color: gray;
-            color: black
+            color: black;
+            white-space: nowrap;
         }
     </style>
 </head>
 
-<body style="background-color:#f1f1f1">
+<body style="background-color:#f1f1f1; min-height: 100vh; display: flex; flex-direction: column">
     <h1 style="text-align: center;">CampusMap</h1>
-    <div 
-    style="text-align: center; justify-content: center; vertical-align: middle;">
-        <h1>Login</h1>
-        <input type="text" id="login" placeholder="Email"><br>
-        <input type="password" id="password" placeholder="Senha"><br>
-        <button class="btn btn-primary"
-            style="margin-top:10px;border-radius: 30px;width: 75%; max-width: 30rem;padding-top: 10px;padding-bottom: 10px" onclick="document.location = 'home.html'">Fazer Login</button>
-
+    <div style="text-align: center; margin: auto 0">
+        <p style="font-size: 2rem">Login</p>
+        <p><input type="text" id="login" placeholder="Email"></p>
+        <p><input type="password" id="password" placeholder="Senha"></p>
+        <p><button class="btn btn-primary"
+                style="margin-top:10px;border-radius: 30px;width: 75%; max-width: 30rem;padding-top: 10px;padding-bottom: 10px"
+                onclick="document.location = 'home.html'">Fazer Login</button></p>
     </div>
 </body>
 
