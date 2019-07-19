@@ -1,0 +1,104 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CampusMap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body style="background-color:#f1f1f1">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">CampusMap</a>
+        <ul class="nav navbar-nav ml-auto">
+            <li>
+                <button class="btn btn-default" style="border-color: black;" onclick="document.location = 'admin/login.html';">Login</button>
+        </li>
+        </ul>
+    </nav>
+    <div style="clear:both;"></div>
+    <div class="card" style="margin-left: 0.75rem;margin-right: 0.75rem;margin-top: 10px">
+        <div class="card-header" style="color: #856404;background-color: #fff3cd;">
+                <img src="img/warning.png" alt="" style="width:2rem;vertical-align: middle" > AVISOS
+            </div>
+            <div class="card-body">
+              <p class="card-text">No dia 29/07/2019 o Campus da Indústria não funcionará no periodo da manhã</p>
+            </div>
+    </div>
+    <div class="card" style="margin-left: 0.75rem;margin-right: 0.75rem;margin-top: 10px;">
+            <div class="card-header" style="background-color:#007bff;color:white;">
+              Localização do Campus
+            </div>
+            <div class="card-body">
+              <p class="card-text">Não sabe chegar até o Campus da Indústria? Nós te ajudamos!.</p>
+              <a href="#" class="btn btn-primary">Ver rotas</a>
+            </div>
+          </div>
+    <div id="div-eventos">
+        <h1 style="margin-left: 0.75rem;margin-right: 0.75rem;margin-top:0.75rem;font-size: 1.5rem">Eventos</h1>
+        <div class="card" id="evento1" style="margin-left: 0.75rem; margin-right: 0.75rem">
+            <div class="card-body">
+                <h5 class="card-title">Evento 1</h5>
+                <h6 class="card-subtitle mb-2 text-muted">29/07/2019 13:00 - 13:30</h6>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui arcu, finibus
+                    at orci ac, fringilla dictum neque. Lorem ipsum.</p>
+                <button class="btn btn-link" onclick="sessionStorage.nome = 'Evento 1';sessionStorage.dataHora = '29/07/2019 13:00 - 13:30';document.location = 'eventos/evento.html'" >Mais Informações</button>
+            </div>
+        </div>
+        <div class="card" id="evento2" style="margin-left: 0.75rem; margin-right: 0.75rem; margin-top: 10px">
+            <div class="card-body">
+                <h5 class="card-title">Evento 2</h5>
+                <h6 class="card-subtitle mb-2 text-muted">29/07/2019 14:00 - 15:00</h6>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui arcu, finibus
+                    at orci ac, fringilla dictum neque. Lorem ipsum.</p>
+                    <button class="btn btn-link" onclick="sessionStorage.nome = 'Evento 2';sessionStorage.dataHora = '29/07/2019 14:00 - 15:00';document.location = 'eventos/evento.html'" >Mais Informações</button>
+            </div>
+        </div>
+    </div>
+    <div style="margin-left: 0.75rem;margin-right: 0.75rem;">
+            <div class="row">
+                <div class="col" style="margin-top:10px">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">Ainda com dúvidas? Entre em contato.
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Nome</label>
+                                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Endereço de email</label>
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite seu email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Mensagem</label>
+                                    <textarea class="form-control" id="message" rows="6" required></textarea>
+                                </div>
+                                <div class="mx-auto">
+                                <button type="submit" class="btn btn-primary text-right">Enviar</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4" style="margin-top:10px">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header bg-success text-white text-uppercase"><i class="fa fa-home"></i>Endereço</div>
+                        <div class="card-body">
+                            <p>Avenida Comendador Franco, 1.341</p>
+                            <p>Curitiba</p>
+                            <p>Paraná</p>
+                            <p>Email : campusdaindustria@fiepr.org.br</p>
+                            <p>Tel. (41) 3271-7777</p>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+</body>
+
+</html>
