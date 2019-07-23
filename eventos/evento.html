@@ -7,6 +7,12 @@
     <title>Evento</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .checked{
+            color: orange;
+        }
+    </style>
 </head>
 
 <body style="background-color:#f1f1f1;padding-left: 10px;padding-right: 10px">
@@ -27,15 +33,63 @@
         vel. Vivamus hendrerit sagittis feugiat. Phasellus eget auctor libero. </p>
 
     <div id="map" style="width: 100%;height: 20rem"></div>
+    <form id="formRating" style="padding-top: 10px">
+        <h1 style="font-size: 2rem;">Avalie o evento</h1>
+        <div class="form-group">
+            <input type="email" class="form-control" id="inputNome" aria-describedby="nome"
+                placeholder="Digite seu nome">
+        </div>
+        <div class="form-group">
+            <span id="star-1" class="fa fa-star"></span>
+            <span id="star-2" class="fa fa-star"></span>
+            <span id="star-3" class="fa fa-star"></span>
+            <span id="star-4" class="fa fa-star"></span>
+            <span id="star-5" class="fa fa-star"></span>
+        </div>
+        <div class="form-group">
+            <label for="inputReview">Digite um comentário sobre o evento: </label>
+            <textarea style="width: 100%" name="inputReview" id="inputReview" rows="10"></textarea>
+        </div>
+        <button style="float:right; margin-bottom: 10px" class="btn btn-primary">Enviar</button>
+    </form>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         document.getElementById("nome-evento").innerHTML = sessionStorage.nome;
         document.getElementById("data-hora").innerHTML = sessionStorage.dataHora;
+        $(".fa-star").click(function(){
+            let starNum = ($(this).attr("id").split("-"))[1];
+            for (let i = 1; i <= starNum; i++) {
+                if(!$("#star-"+i.toString()).hasClass("checked")){
+                    $("#star-"+i.toString()).addClass("checked");
+                }
+            }
+            for (let j = 5; j > starNum; j--) {
+                if($("#star-"+j).hasClass("checked")){
+                    $("#star-"+j).removeClass("checked");
+                }
+            }
+        });
+        $(".fa-star").hover(function(){
+            let starNum = ($(this).attr("id").split("-"))[1];
+            for (let i = 1; i <= starNum; i++) {
+                if(!$("#star-"+i.toString()).hasClass("checked")){
+                    $("#star-"+i.toString()).addClass("checked");
+                }
+            }
+            for (let j = 5; j > starNum; j--) {
+                if($("#star-"+j).hasClass("checked")){
+                    $("#star-"+j).removeClass("checked");
+                }
+            }
+        });
     </script>
     <script>
         // Initialize and add the map
         function initMap() {
             // The location of Uluru
-            if(sessionStorage.nome == "Evento 1"){
+            if (sessionStorage.nome == "Evento 1") {
                 var location = { lat: -25.447169, lng: -49.245050 };
             }
             else {
@@ -51,8 +105,9 @@
         * The key parameter will contain your own API key (which is not needed for this tutorial)
         * The callback parameter executes the initMap() function
         -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASGXI8opentLTfoWoif3jpHKjPfHv9pfY&callback=initMap">
-    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASGXI8opentLTfoWoif3jpHKjPfHv9pfY&callback=initMap">
+        </script>
 
 </body>
 
